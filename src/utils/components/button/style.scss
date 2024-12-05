@@ -1,0 +1,18 @@
+.btn {
+    @apply flex justify-center items-center align-middle relative duration-300 cursor-pointer overflow-hidden;
+    transform: perspective(1px) translateZ(0);
+    transition-property: color;
+
+    &::before {
+        content: "";
+        @apply absolute -z-[1] top-0 bottom-0 left-0 right-0 origin-[0_50%] duration-300 ease-out;
+        transform: scaleX(0);
+        transition-property: transform;
+    }
+
+    &:hover, &:focus, &:active {
+        &::before {
+            transform: scaleX(1);
+        }
+    }
+}

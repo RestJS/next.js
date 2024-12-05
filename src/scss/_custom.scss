@@ -1,0 +1,49 @@
+/* Header Style Start */
+.header-fixed {
+    @apply fixed top-0 w-full z-[999] bg-white;
+    animation: fixedTop 0.6s ease-in-out;
+
+    @keyframes fixedTop {
+        0% {
+            transform: translateY(-100%);
+        }
+
+        50% {
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Header Style End */
+
+/* Default Page Style Start */
+.default-page,
+article {
+    h2 {
+        @apply text-primary mb-sm;
+    }
+
+    h3 {
+        @apply text-secondary;
+    }
+
+    p,
+    h3,
+    h4,
+    h5 {
+        @apply mb-md;
+    }
+
+    .paragraph {
+        @apply mb-xl;
+    }
+
+    ul {
+        @apply my-lg;
+
+        li {
+            @apply mb-[12px];
+        }
+    }
+}
+/* Default Page Style End */

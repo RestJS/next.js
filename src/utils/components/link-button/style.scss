@@ -1,0 +1,18 @@
+.btn-link {
+    span {
+        @apply relative;
+
+        &::before {
+            content: '';
+            @apply absolute bottom-0 left-0 w-0 h-[2px] bg-accent ease-out duration-300;
+        }
+    }
+
+    &:hover, &:focus, &:active {
+        @apply no-underline;
+
+        span::before {
+            @apply w-full;
+        }
+    }
+}

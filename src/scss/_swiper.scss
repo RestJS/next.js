@@ -1,0 +1,13 @@
+/* Client Slider Start */
+.clientSlider, .chooseSlider {
+    .swiper-pagination-bullets {
+        .swiper-pagination-bullet {
+            @apply  bg-secondary/50 w-[10px] h-[10px] #{!important};
+
+            &.swiper-pagination-bullet-active {
+                @apply bg-secondary #{!important};
+            }
+        }
+    }
+}
+/* Client Slider End */
