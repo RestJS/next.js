@@ -1,0 +1,98 @@
+@layer base {
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: border-box;
+        @apply m-0 p-0;
+    }
+
+    html {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    img,
+    svg {
+        @apply max-w-full h-auto align-middle border-0;
+        @apply object-cover;
+    }
+
+    a {
+        border-width: 0;
+        border-style: solid;
+        border-color: #e5e7eb;
+    }
+
+    input,
+    button,
+    select,
+    textarea {
+        @apply focus:outline-none;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+
+    h1,
+    .h1 {
+        @apply text-[39px] leading-[59px];
+        @apply font-default font-bold lg:text-[49px] lg:leading-[73px] capitalize;
+    }
+
+    h2,
+    .h2 {
+        @apply text-[31px] leading-[47px];
+        @apply font-default font-bold lg:text-[39px] lg:leading-[59px] capitalize;
+    }
+
+    h3,
+    .h3 {
+        @apply text-[25px] leading-[38px];
+        @apply font-default font-bold lg:text-[31px] lg:leading-[47px] capitalize;
+    }
+
+    h4,
+    .h4 {
+        @apply text-[20px] leading-[30px];
+        @apply font-default font-normal lg:text-[25px] lg:leading-[38px] capitalize;
+    }
+
+    h5,
+    .h5 {
+        @apply text-[16px] leading-[24px];
+        @apply font-default font-normal lg:text-[20px] lg:leading-[30px] capitalize;
+    }
+
+    p,
+    .p,
+    main,
+    body {
+        @apply text-[13px] leading-[29px];
+        @apply font-alt font-normal lg:text-[16px] lg:leading-[36px];
+    }
+
+    a {
+        @apply text-accent no-underline hover:underline;
+    }
+
+    main ul {
+        @apply pl-sm;
+
+        li {
+            @apply list-none relative pl-lg;
+
+            &:after {
+                content: '';
+                @apply bg-primary h-[10px] rounded-full w-[10px] absolute top-[10px] lg:top-[13px] left-0;
+            }
+        }
+    }
+
+    hr {
+        @apply border-none bg-accent w-[100px] h-[3px] lg:w-[150px] lg:h-[4px] rounded-[8px] mt-md mb-lg;
+    }
+}
