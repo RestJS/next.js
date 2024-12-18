@@ -1,7 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
-/* Tailwind SCSS */
+/* Tailwind Styles */
 @use "tailwindcss";
+
+/* Swiper Styles */
+@use 'swiper/css';
+@use 'swiper/css/navigation';
+@use 'swiper/css/pagination';
 
 /* Custom Styles */
 @use '@/scss/theme';
