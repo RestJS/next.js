@@ -42,3 +42,21 @@
 }
 
 /* Button Style End */
+
+/* Header Style Start */
+.header-fixed {
+    @apply fixed top-0 w-full z-[999] bg-white;
+    animation: fixedTop 0.6s ease-in-out;
+
+    @keyframes fixedTop {
+        0% {
+            transform: translateY(-100%);
+        }
+
+        50% {
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Header Style End */

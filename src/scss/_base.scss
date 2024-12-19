@@ -21,7 +21,7 @@
     a {
         border-width: 0;
         border-style: solid;
-        border-color: #e5e7eb;
+        border-color: transparent;
     }
 
     input,
@@ -38,45 +38,59 @@
     }
 
     h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6 {
+        @apply leading-[1.2] capitalize font-alt;
+    }
+
+    h1,
     .h1 {
-        @apply text-[39px] leading-[59px];
-        @apply font-default font-bold lg:text-[49px] lg:leading-[73px] capitalize;
+        @apply text-[39px] font-semibold lg:text-[47px];
     }
 
     h2,
     .h2 {
-        @apply text-[31px] leading-[47px];
-        @apply font-default font-bold lg:text-[39px] lg:leading-[59px] capitalize;
+        @apply text-[32px] font-medium lg:text-[40px];
     }
 
     h3,
     .h3 {
-        @apply text-[25px] leading-[38px];
-        @apply font-default font-bold lg:text-[31px] lg:leading-[47px] capitalize;
+        @apply text-[27px] font-normal lg:text-[33px];
     }
 
     h4,
     .h4 {
-        @apply text-[20px] leading-[30px];
-        @apply font-default font-normal lg:text-[25px] lg:leading-[38px] capitalize;
+        @apply text-[22px] font-medium lg:text-[28px];
     }
 
     h5,
     .h5 {
-        @apply text-[16px] leading-[24px];
-        @apply font-default font-normal lg:text-[20px] lg:leading-[30px] capitalize;
+        @apply text-[19px] font-bold lg:text-[23px];
+    }
+
+    h6,
+    .h6 {
+        @apply text-[16px] font-bold lg:text-[19px];
     }
 
     p,
     .p,
     main,
     body {
-        @apply text-[13px] leading-[29px];
-        @apply font-alt font-normal lg:text-[16px] lg:leading-[36px];
+        @apply font-default font-normal lg:text-[16px] lg:leading-[30px];
     }
 
     a {
-        @apply text-accent no-underline hover:underline;
+        @apply text-secondary no-underline hover:underline;
     }
 
     main ul {
@@ -87,7 +101,7 @@
 
             &:after {
                 content: '';
-                @apply bg-primary h-[10px] rounded-full w-[10px] absolute top-[10px] lg:top-[13px] left-0;
+                @apply bg-secondary h-[10px] rounded-full w-[10px] absolute top-[10px] left-0;
             }
         }
     }
