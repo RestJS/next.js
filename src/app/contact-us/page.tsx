@@ -1,4 +1,9 @@
+import type { Metadata } from "next";
 import ContactForm from "./ContactForm";
+
+export const metadata: Metadata = {
+    title: "Contact Us Today"
+};
 
 export default function Contact() {
 
@@ -7,8 +12,8 @@ export default function Contact() {
         <section className="contact-section pt-lg lg:pt-xxl">
             <div className="container lg:py-xxl py-lg">
                 <div className="px-md pb-lg">
-                    <h2 className="text-primary mb-md">The Best Agency For Your Business</h2>
-                    <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages popularised in the 1960s.</p>
+                    <h1 className="text-primary mb-sm">Contact Us Today</h1>
+                    <p>Fill Out the Information Below to Request Service.</p>
                 </div>
 
                 <ContactForm />

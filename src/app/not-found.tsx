@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FaHome } from "react-icons/fa";
 
 export const metadata: Metadata = {
-    title: "Page Not Found - Next Appication"
+    title: "Page Not Found"
 };
 
 export default function NotFound() {

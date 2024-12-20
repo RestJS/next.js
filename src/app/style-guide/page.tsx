@@ -1,6 +1,11 @@
+import type { Metadata } from "next";
 import Button from "@/components/ui/Button";
 import LinkButton from "@/components/ui/LinkButton";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+    title: "Style Guide"
+};
 
 export default function StyleGuide() {
 
