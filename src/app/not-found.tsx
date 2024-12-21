@@ -16,8 +16,8 @@ export default function NotFound() {
                 <h1 className="mb-md text-primary">OOPS! that page can’t be found.</h1>
                 <h4 className="mb-xxl">Return to the home page or check our blog below.</h4>
 
-                <Link href="/" title="Back To Home" className="!no-underline mx-auto">
-                    <Button variant="secondary" size="w-full max-w-[290px] h-[57px] m-auto"> <FaHome className="text-[30px] mr-[12px]" /> Back To Home</Button>
+                <Link href="/" title="Back To Home" className="!no-underline">
+                    <Button variant="secondary" size="w-[290px] h-[57px]"> <FaHome className="text-[30px] mr-[12px]" /> Back To Home</Button>
                 </Link>
             </div>
 

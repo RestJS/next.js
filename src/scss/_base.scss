@@ -90,7 +90,7 @@
     }
 
     a {
-        @apply text-secondary no-underline hover:underline;
+        @apply text-secondary no-underline hover:underline inline-block;
     }
 
     main ul {
