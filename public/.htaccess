@@ -1,0 +1,9 @@
+RewriteEngine on
+
+# Router Define
+RewriteRule ^(.*)$ $1
+RewriteRule ^(/)?$ index.html [L] 
+
+# Error Define 
+ErrorDocument 404 /404/
+ErrorDocument 403 /404/
