@@ -35,7 +35,7 @@ export default function Accordin({ data }: { data: AccordinProps[] }) {
                         <AiFillCaretDown className="ml-sm text-secondary text-[24px] ease-out duration-300 accordin-icon" />
                     </div>
 
-                    <div className="h-0 accordin-content overflow-hidden">
+                    <div className="h-0 accordin-content overflow-hidden ease-out duration-300">
                         <div className="p-md pt-0">
                             {paragraph}
                         </div>
