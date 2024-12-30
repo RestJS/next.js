@@ -1,7 +1,7 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import Button from "@/components/ui/Button";
 import LinkButton from "@/components/ui/LinkButton";
-import Link from "next/link";
 
 export const metadata: Metadata = {
     title: "Style Guide"
@@ -11,7 +11,7 @@ export default function StyleGuide() {
 
     return <main className="style-guide-page default">
         <div className="my-xxl container">
-            <h1 className="text-black px-md">Style Guide - Meghawks</h1>
+            <h1 className="text-black px-md">Style Guide</h1>
             <div className="flex flex-col lg:flex-row mt-xl">
                 <div className="px-md basis-1/5">
                     <img src="/assets/images/logo/black.png" alt="logo" className="w-full" />
