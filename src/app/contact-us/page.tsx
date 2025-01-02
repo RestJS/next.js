@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import SubpageHeroSection from "@/components/ui/SubpageHeroSection";
-import EnquiryForm from "@/features/react-hook-form/EnquiryForm";
+import ContactForm from "@/features/react-hook-form/ContactForm";
 
 export const metadata: Metadata = {
     title: "Contact Us Today"
@@ -19,7 +19,7 @@ export default function Contact() {
                     <p>Fill Out the Information Below to Request Service.</p>
                 </div>
 
-                <EnquiryForm />
+                <ContactForm />
             </div>
         </div>
 

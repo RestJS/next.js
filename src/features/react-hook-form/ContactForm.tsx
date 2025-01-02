@@ -1,33 +1,25 @@
 'use client'
-import Button from "@/components/ui/Button";
+import { useState } from "react";
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
+import Button from "@/components/ui/Button";
 import { BsArrowRight } from "react-icons/bs";
 import Select from "./components/Select";
 import Input from "./components/Input";
 import Textarea from "./components/Textarea";
-import { useState } from "react";
+import useMail from "./hooks/useMail";
 
-export default function EnquiryForm() {
+export default function ContactForm() {
 
     // Variables declaration
-    const [isPending, setisPending] = useState(false);
     const _useForm = useForm<FormData>({ mode: "onTouched" });
-    const onSubmit: SubmitHandler<FormData> = async (data: FormData) => {
-        setisPending(true);
-        await fetch("/mail.php", {
-            headers: { 'Content-Type': 'application/json' },
-            method: "post",
-            body: JSON.stringify(data)
-        })
-            .then(async (response) => {
-                console.log(await response.json());
-                setisPending(false);
-                _useForm.reset();
-            })
-            .catch((error) => console.log(error))
+    const [data, setData] = useState<FormData>();
+    const isSubmitMail = useMail(data);
+    const onSubmit: SubmitHandler<FormData> = (data) => {
+        setData(data);
+        _useForm.reset();
     }
 
-    return <div className="enquiry-form">
+    return <div className="contact-form">
         <FormProvider {..._useForm} >
 
             <div className="px-md">
@@ -68,8 +60,8 @@ export default function EnquiryForm() {
                 </div>
 
                 <div className="p-md basis-full grow-0 shrink-0 text-center flex justify-center">
-                    {isPending ?
-                        <Button variant="primary" type="button" size="w-[290px] h-[54px]"><span className="animate-spin w-[25] h-[25] rounded-full border-white border-t-white/20 border-4 mr-sm" />Processing</Button>
+                    {isSubmitMail ?
+                        <Button variant="primary" type="button" size="w-[290px] h-[54px]"><span className="animate-spin w-[25] h-[25] rounded-full border-black border-t-black/20 border-4 mr-sm" />Processing</Button>
                         : <Button variant="primary" type="submit" size="w-[290px] h-[54px]">Send Request <BsArrowRight className="text-[25px] ml-sm" /></Button>
                     }
                 </div>
