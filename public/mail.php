@@ -19,7 +19,7 @@ $message = '<html><body>';
 foreach ($data as $key => $val) {
     $message .= "<p> <strong>" . $key . ":</strong> " . $val . "</p>";
 }
-$message .= "</table></body></html>'";
+$message .= "</body></html>'";
 
 if (mail($emailto, $subject, $message, $headers)) {
     $data = "Thank you for filling out your information!";

@@ -4,6 +4,7 @@ export default function useMail(data: FormData | undefined) {
 
     // Variables declaration
     const [isPending, setIsPending] = useState(false);
+    const [isSubmited, setIsSubmited] = useState(false);
 
     // Mail Submit handler
     useEffect(() => {
@@ -17,10 +18,11 @@ export default function useMail(data: FormData | undefined) {
                 .then(async (response) => {
                     console.log(await response.json());
                     setIsPending(false);
+                    setIsSubmited(true);
                 })
                 .catch((error) => console.log(error))
         }
     }, [data]);
 
-    return isPending;
+    return [isPending, isSubmited];
 }

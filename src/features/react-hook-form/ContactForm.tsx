@@ -13,7 +13,7 @@ export default function ContactForm() {
     // Variables declaration
     const _useForm = useForm<FormData>({ mode: "onTouched" });
     const [data, setData] = useState<FormData>();
-    const isSubmitMail = useMail(data);
+    const [isPending, isSubmited] = useMail(data);
     const onSubmit: SubmitHandler<FormData> = (data) => {
         setData(data);
         _useForm.reset();
@@ -23,7 +23,7 @@ export default function ContactForm() {
         <FormProvider {..._useForm} >
 
             <div className="px-md">
-                {_useForm.formState.isSubmitSuccessful && <div className="bg-success/15 mb-md p-md border border-success rounded-[8] text-success">
+                {isSubmited && <div className="bg-success/15 mb-md p-md border border-success rounded-[8] text-success">
                     Thank you for filling out your information!
                 </div>
                 }
@@ -60,8 +60,8 @@ export default function ContactForm() {
                 </div>
 
                 <div className="p-md basis-full grow-0 shrink-0 text-center flex justify-center">
-                    {isSubmitMail ?
-                        <Button variant="primary" type="button" size="w-[290px] h-[54px]"><span className="animate-spin w-[25] h-[25] rounded-full border-black border-t-black/20 border-4 mr-sm" />Processing</Button>
+                    {isPending ?
+                        <Button variant="primary" type="button" size="w-[290px] h-[54px]"><span className="animate-spin w-[25] h-[25] rounded-full border-white border-t-white/20 border-4 mr-sm" />Processing</Button>
                         : <Button variant="primary" type="submit" size="w-[290px] h-[54px]">Send Request <BsArrowRight className="text-[25px] ml-sm" /></Button>
                     }
                 </div>
